@@ -12,7 +12,9 @@ export const Header = ({
     <header>
         <h1>Planificador de Gastos</h1>
         {isValidPresupuesto ? (
-            <ControlPresupuesto />
+            <ControlPresupuesto 
+                presupuesto = {presupuesto}
+            />
         ) : (
             <NuevoPresupuesto 
                 presupuesto = {presupuesto}
