@@ -20,7 +20,7 @@ function App() {
   const [gastoEditar, setGastoEditar] = useState({});
 
   const [filtro, setFiltro] = useState('');
-  const [gastosFiltrados, setGastosFiltrados] = useState('')
+  const [gastosFiltrados, setGastosFiltrados] = useState([])
 
   useEffect(()=>{
     if(Object.keys(gastoEditar).length > 0){
@@ -94,6 +94,7 @@ function App() {
     <div className={modal ? 'fijar' : ''}>
       <Header
         gastos={gastos}
+        setGastos={setGastos}
         presupuesto={presupuesto}
         setPresupuesto={setPresupuesto}
         isValidPresupuesto={isValidPresupuesto}
